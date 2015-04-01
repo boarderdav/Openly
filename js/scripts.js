@@ -36,52 +36,61 @@ $(document).ready(function() {
     });
     $('.responsive').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 1000,
         slidesToShow: 3,
         slidesToScroll: 1,
+		autoplay: true,
+		touchMove: true,
         responsive: [{
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true
+                dots: true,
+				autoplay: true,
             }
         }, {
-            breakpoint: 760,
+            breakpoint: 960,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 1,
+				autoplay: true
             }
         }, {
-            breakpoint: 480,
+            breakpoint: 640,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+				autoplay: true
             }
         }]
     });
 
     $('.center').slick({
-        centerMode: true,
+        dots: true,
+		centerMode: true,
         infinite: true,
+		speed: 1000,
         centerPadding: '60px',
         slidesToShow: 3,
+		autoplay: true,
+		autoplayspeed: 2000,
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 900,
             settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '40px',
-                slidesToShow: 3
+                slidesToShow: 1
             }
         }, {
-            breakpoint: 480,
+            breakpoint: 640,
             settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
-                centerPadding: '40px',
+                centerPadding: '20px',
                 slidesToShow: 1
             }
         }]
