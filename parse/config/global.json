@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Openly": {
+            "applicationId": "cujmYVwZ7TYAYvZXvV75gBrTd8auik9JNEzYxti2", 
+            "masterKey": "08sl5FGxHPiGDxHRKtJQBmrWMD1xKFTVIrDK7Gp8"
+        }, 
+        "_default": {
+            "link": "Openly"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.4.2"
+    }
+}

@@ -15,6 +15,7 @@
     <link href="css/slick.css" rel="stylesheet" type="text/css"/>
     <link href="css/slicktheme.css" rel="stylesheet" type="text/css"/>
     <script src="js/vendor/modernizr.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
   <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/advent-pro:n1,n2,n3:default.js" type="text/javascript"></script>
 </head>
   
@@ -56,31 +57,31 @@
 	<div class="row">
       <div class="large-12 columns">
     	<div class="text-center"><img src="img/openlyLogoNew@svg-33.svg" alt="openly main logo homepage"/></div>
-        <h2 class="text-center">Share your most heartfelt thoughts with other students, anonymously.</h2>
+        <!--<h2 class="text-center">Share your most heartfelt thoughts with other students, anonymously.</h2>
         <a href="https://itunes.apple.com/us/app/openly-app/id981152563?mt=8">
           <div class="text-center"><img src="img/appstore.png" alt="download openly from Apple's App Store" width="135" height="40" title="appstore"/></div>
         </a>
-        <br>
+        	<br>
         <a href="https://play.google.com/store/apps/details?id=com.opensea.android&hl=en">
           <div class="text-center"><img src="img/playstore.png" alt="download openly from Google Play Store" width="129" height="45" title="google play"/></div>
         </a>
-        <br>
-        <hr/>
+        	<br>
+        	<hr/>-->
         </div>
       </div>
 
     
     <div class="row fullWidth" style="background-color: #0EB8B0; box-shadow: 0px 4px 4px #9B9B9B; -webkit-box-shadow: 0px 4px 4px #9B9B9B;">
       <div class="large-12 columns shadow">
-        <h1 class="text-center welcome" style="color: #fff; height: 120px; padding-top: 40px; line-height: 36px;">Welcome to Openly</h1>
+        <h1 class="text-center welcome" id="numberusers" style="color: #fff; height: 120px; padding-top: 40px; line-height: 36px;">Number of Active Users<br>5218</h1>
         
-        <h5 class="text-center" style="color:#fff; margin-bottom:20px">Let the fun begin!</h5>
+        <h5 class="text-center" style="color:#fff; margin-bottom:20px">...</h5>
       </div>
     </div>
 
 <br>
     
-    <div class="row">
+    <!--<div class="row">
       <div class="large-12 columns">
       	<div class="panel">
 	        <h3>We&rsquo;re stoked you want to try Openly! </h3>
@@ -98,17 +99,17 @@
 	        	</div>
 	        	<div class="large-4 medium-4 columns">
                 <img src="img/fi-social-twitter@b.svg" style="margin-left:40px" width="100" height="100" alt="follow us on Twitter"/>
-        		  <p><a href="https://www.twitter.com/Openlyapp">@openlyapp</a><br />Ping us on Twitter if you have questions or want to highlight your experience using Openly.</p>
+        		  <p><a href="https://www.twitter.coom/Openlyapp">@openlyapp</a><br />Ping us on Twitter if you have questions or want to highlight your experience using Openly.</p>
 	        	</div>        
 					</div>
       	</div>
       </div>
-    </div>
+    </div>-->
     
     <div class="row fullWidth" style="margin-bottom: 10px">
         <h1 class="text-center" style="background-color: #0B7598; box-shadow: 0px 4px 4px #9B9B9B; color: #fff; height: 100px; padding-top: 20px">Openly Screenshots</h1>
     </div>
-    <div class="row"> 
+    <!--<div class="row"> 
      <div class="large-12 medium-10 small-11 large-centered medium-centered small-centered text-center columns">
        <div class="slick-slider center">
          <div><img src="img/screenshot750x1334ss-80_1.png" style="padding:5px" alt="Openly iOS Screenshot #1"/></div>
@@ -117,7 +118,7 @@
          <div><img src="img/screenshot750x1334ss-80_4.png" style="padding:5px" alt="Openly iOS Screenshot #4"/></div>      
        </div>
 	  </div>
-    </div>
+    </div>-->
     
   
   <div class="row fullWidth">
@@ -132,7 +133,7 @@
       </a>
     </div>
     <div class="large-3 medium-6 small-12 columns">
-      <a href="https://www.twitter.com/getopenlyapp">
+      <a href="https://www.twitter.coom/getopenlyapp">
         <img src="img/fi-social-twitter@b.svg" alt="Twitter social media Openly" id="twitter"/>
       </a>
     </div>
@@ -152,7 +153,38 @@
 
 <br>
 <br>
-  
+
+<div class="row">
+  <div>Login <input id="username" /></div>
+  <div>Pass <input id="password" /></div>
+  <div><button id="registerBtn" value="Register">Register</button><button id="signInBtn" value="Sign In">Sign In</button>
+  </div>
+  <div id="status" style="display:none">
+    <div id="user"></div><button id="logoutBtn">Logout</button>
+  </div>
+
+</div>
+
+
+  <div id="main">
+<!--    <a href="https://api.parse.com/1/classes/username/uHPyi0OH0gYXCO0Lqg61YTZzs"> -->    
+	
+    <div style="display:none" class="error">
+      Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
+    </div>
+
+    <div style="display:none" class="success">
+      <p>We've also just created your first object using the following code:</p>
+      
+        <code>
+          var TestObject = Parse.Object.extend("TestObject");<br/>
+          var testObject = new TestObject();<br/>
+          testObject.save({foo: "bar"});
+        </code>
+    </div>
+    
+  </div>
+        
 
 <div class="row fullWidth footer" style="background-color:#053747; height:200px; position:absolute; bottom:20; left:0; width:100%">
     <div class="large-12 columns">
@@ -175,7 +207,7 @@
         </div>
     </div> 
   </div>
-      
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
@@ -186,5 +218,98 @@
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/scripts.js"></script>
+    
+	<script type="text/javascript">
+
+	  	//var user = new Parse.User();
+//		user.set("username", "nasasurfer");
+//		user.set("password", "element");
+//		user.set("email", "djenkins.nasa@gmail.com");
+//  
+//	// other fields can be set just like with Parse.Object
+//		user.set("phone", "757-536-5000");
+//  
+//		user.signUp(null, {
+// 		 success: function(user) {
+//    // Hooray! Let them use the app now.
+//  		},
+//  		error: function(user, error) {
+//    // Show the error message somewhere and let the user try again.
+//   		 alert("Error: " + error.code + " " + error.message);
+// 		 }
+//		});
+//	  
+//	Parse.initialize("cujmYVwZ7TYAYvZXvV75gBrTd8auik9JNEzYxti2", "Rx4yYoQuMiW1Flzmc9EqMU9ovl3BVAkIMdWRLNqC");
+	Parse.initialize("ESeFMk9iGuuQ0tnw93n1BpiP0E3DC0E5zFqKkZT9", "ZHaOCrwZ7OfrvbyEbzi58qdxxOpypsO9p4cwfRay");
+	
+	$('numberusers').text(function(index, text) {
+        var numberusers = new Parse.Object.('numberusers');
+    });
+	
+	
+	$('#registerBtn').click(function() {
+	
+	var user = new Parse.User();
+	user.set("username", $("#username").val());
+	user.set("password", $("#password").val());
+//	user.set("email", "email@example.com");
+ 
+// other fields can be set just like with Parse.Object
+//	user.set("phone", "415-392-0202");
+ 
+	user.signUp(null, {
+ 		success: function(user) {
+    // Hooray! Let them use the app now.
+	alert("successfully registered!");
+  },
+  	error: function(user, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+  }
+ });
+});
+
+	$("#signInBtn").click(function() {
+		Parse.User.logIn($("#username").val(), $("#password").val(), {
+			success: function(user) {
+				// Do stuff after successful login.
+				alert("Logged in successfully!");
+				
+				var currentUser = Parse.User.current();
+				if (currentUser) {
+					$("#user").html(currentUser.attributes.username);
+					$("#status").css("display", "inline");
+				} else {
+					// show the signup or login page
+				}
+			},
+			error: function(user, error) {
+				// The login failed.  Check error to see why.
+				alert("Login failed");
+			}
+		});
+
+	$("#logoutBtn").click(function() {
+		var currentUser = Parse.User.current();
+		if (currentUser) {
+			Parse.User.logOut();
+		} else {
+			//show the signup or login page
+		}
+			$("#user").html(" ");
+			$("#sstatus").css("display", "none");
+		});
+	});
+	
+	
+		  
+var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+  alert("yay! it worked");
+});
+	
+	  
+	</script>
   </body>
 </html>
